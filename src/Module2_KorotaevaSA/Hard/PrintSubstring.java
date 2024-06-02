@@ -6,9 +6,9 @@ public class PrintSubstring {
         Задана строка «Hello world!». Вывести подстроку с 6 по 11 символ.
          */
         String s = "Hello world!";
-        System.out.println("Взятие подстроки c 6 по 11 символ в «Hello world!» - " + s.substring(6,11));
+        System.out.println("Взятие подстроки c 6 по 11 символ в «Hello_world!» - " + s.substring(6,12));
         /* результат:
-        Взятие подстроки c 6 по 11 символ в «Hello world!» - world
+        Взятие подстроки c 6 по 11 символ в «Hello_world!» - world!
          */
     }
 }
