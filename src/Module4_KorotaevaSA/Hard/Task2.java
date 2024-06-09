@@ -14,17 +14,19 @@ public class Task2 {
         System.out.println("Шахматное поле 8*8. (a-h) на (1-8) клеток.");
         System.out.println("Введите координату пешки в формате БукваЦифра:");
         String pawnXY = scan.next();
-        String pawnX = pawnXY.substring(0, 1);
-        String pawnY = pawnXY.substring(1,2);
-        char pawnXc = pawnX.charAt(0);
-        int pawnYi = Integer.parseInt(pawnY);
+        //String pawnX = pawnXY.substring(0, 1);
+        //String pawnY = pawnXY.substring(1,2);
+        char pawnXc = pawnXY.charAt(0);
+        //int pawnYi = Integer.parseInt(pawnY);
+        int pawnYi = Character.getNumericValue(pawnXY.charAt(1));
 
         System.out.println("Введите координату слона в формате БукваЦифра:");
         String bishopXY = scan.next();
-        String bishopX = bishopXY.substring(0, 1);
-        String bishopY = bishopXY.substring(1,2);
-        char bishopXc = bishopX.charAt(0);
-        int bishopYi = Integer.parseInt(bishopY);
+        //String bishopX = bishopXY.substring(0, 1);
+        //String bishopY = bishopXY.substring(1,2);
+        char bishopXc = bishopXY.charAt(0);
+        //int bishopYi = Integer.parseInt(bishopY);
+        int bishopYi = Character.getNumericValue(bishopXY.charAt(1));
 
         int deltaX = Math.abs(pawnXc - bishopXc);
         int deltaY = Math.abs(pawnYi - bishopYi);

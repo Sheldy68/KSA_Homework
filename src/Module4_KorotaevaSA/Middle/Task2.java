@@ -14,10 +14,10 @@ public class Task2 {
         int x = scan.nextInt();
         System.out.println("Введите y:");
         int y = scan.nextInt();
-        if (x%y == 0) {
+        if (x % y == 0) {
             System.out.println("Число x кратно числу y");
         } else {
-            int z = x%y;
+            int z = x % y;
             System.out.println("Число x не кратно числу y. Остаток от деления x на y равен: " + z);
         }
         /* результат
