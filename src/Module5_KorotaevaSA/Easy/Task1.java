@@ -18,7 +18,7 @@ public class Task1 {
         do {
             res = res * a;
             i++;
-            System.out.println(res);
         } while (i <= n);
+        System.out.println(res);
     }
 }
