@@ -11,13 +11,12 @@ public class Task4 {
          */
         Scanner scan = new Scanner(System.in);
         System.out.println("Укажите натуральное число:");
-        double n = scan.nextDouble();
-        double x = 0;
-        double res = 1;
+        int n = scan.nextInt();
+        int x = 0;
+        int res = 1;
         //цикл по массиву
         for (int i = 0; i < n; i++) {
             x = x + 1;
-            //если делится без остатка:
             res = res * x;
         }
         if (n < 1 ) {
