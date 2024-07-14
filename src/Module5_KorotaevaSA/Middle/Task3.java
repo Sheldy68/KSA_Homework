@@ -8,27 +8,21 @@ public class Task3 {
 //        Значение N вводятся с клавиатуры. N может принимать значение от 1 до 100.
         Scanner scan = new Scanner(System.in);
         System.out.println("Укажите число от 1 до 100:");
-        int n = scan.nextInt();
-        int x = 0;
-        String t = "Делители: ";
+        int number = scan.nextInt();
+        String text = "Делители: ";
         //цикл по массиву
-        for (int i = 0; i < n; i++) {
-            x = x + 1;
-            if (x == 1 | x == n) {
-                // не учитываем
-            } else {
-                //если делится без остатка:
-                if (n % x == 0) {
-                    t = t + " " + x;
-                }
+        for (int i = 2; i < number; i++) {
+            //если делится без остатка:
+            if (number % i == 0) {
+                text = text + " " + i;
             }
         }
-        if (n == 1) {
+        if (number == 1) {
             System.out.println("Для числа 1 делитель только единица");
-        } else if (n < 1 | n > 100) {
+        } else if (number < 1 | number > 100) {
             System.out.println("Некорректный ввод числа");
         } else {
-            System.out.println(t);
+            System.out.println(text);
         }
         /*
         Результат:

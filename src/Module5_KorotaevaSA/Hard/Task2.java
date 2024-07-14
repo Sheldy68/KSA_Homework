@@ -17,44 +17,47 @@ public class Task2 {
         //массив для индексов
         int[] array1000;
         array1000 = new int[1000];
-        int y = 0; //для индекса
-        int l = 0; //для индекса
-        int z = 0; //для индекса
-        final int int1000 = 1000; // max длина массива
+        int elementValue = 0; //для индекса
+        int finalArrayLength = 0; //для массива
+        int finalArrayIndex = 0; //для индекса
         Scanner scan = new Scanner(System.in);
         System.out.println("Укажите количество элементов в массиве (не более 1000):");
-        int n = scan.nextInt();
-        Scanner scan2 = new Scanner(System.in);
+        int numberOfElememts = scan.nextInt();
         System.out.println("Перечислите элементы массива через пробел:");
-        String line = scan2.nextLine();
-        String[] elem = line.split(" "); //разбили по пробелу строку в массив
+//        String line = scan2.nextLine();
+//        String[] elem = line.split(" "); //разбили по пробелу строку в массив
 //        for( String arr : elem) {
 //            System.out.println(arr); //вывести массив по элементам
 //        }
-
+        int[] elementsArray = new int[numberOfElememts];
+        // считаем с консоли, можно с одной строки через пробел
+        for (int i = 0; i < elementsArray.length; i++) {
+            elementsArray[i] = scan.nextInt();
+        }
         //цикл по массиву
-        for (int i = 0; i < n; i++) {
-            y = Integer.parseInt(elem[i]); //прочитаем значение i элемента
-            array1000[y] = 1; //запишем число 1 с таким индексом в проверочный массив
-            l = l + 1; //это будет длина массива с индексами
+        for (int i = 0; i < numberOfElememts; i++) {
+        //    y = Integer.parseInt(elem[i]); //прочитаем значение i элемента
+            elementValue = elementsArray[i];
+            array1000[elementValue] = 1; //запишем число 1 с таким индексом в проверочный массив
+            finalArrayLength = finalArrayLength + 1; //это будет длина массива с индексами
         }
         int[] arrayFinal;
-        arrayFinal = new int[l];
-        l = 0;
-        for (int i = 0; i < int1000; i++) {
-            y = array1000[i]; //прочитаем значение i элемента
-            if (y == 1) {
-                l = l + 1; // длина итогового массива
-                arrayFinal[z] = i;
-                z = z + 1;
+        arrayFinal = new int[finalArrayLength];
+        finalArrayLength = 0; //обнулим, чтобы дальше пересчитать
+        for (int i = 0; i < array1000.length; i++) {
+            elementValue = array1000[i]; //прочитаем значение i элемента
+            if (elementValue == 1) {
+                finalArrayLength = finalArrayLength + 1; // длина массива для печати, элементы только с единицами
+                arrayFinal[finalArrayIndex] = i;
+                finalArrayIndex = finalArrayIndex + 1;
             }
         }
         int[] arrayPrint;
-        arrayPrint = new int[l];
-        for (int i = 0; i < l; i++) {
+        arrayPrint = new int[finalArrayLength];
+        for (int i = 0; i < finalArrayLength; i++) {
             arrayPrint[i] = arrayFinal[i];
         }
-        if (n > 0) {
+        if (numberOfElememts > 0) {
             System.out.println(Arrays.toString(arrayPrint)); //вывести массив
         }
         /*
