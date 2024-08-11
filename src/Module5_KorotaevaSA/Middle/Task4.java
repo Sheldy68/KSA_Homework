@@ -11,18 +11,16 @@ public class Task4 {
          */
         Scanner scan = new Scanner(System.in);
         System.out.println("Укажите натуральное число:");
-        int n = scan.nextInt();
-        int x = 0;
-        int res = 1;
+        int number = scan.nextInt();
+        int result = 1;
         //цикл по массиву
-        for (int i = 0; i < n; i++) {
-            x = x + 1;
-            res = res * x;
+        for (int i = 1; i <= number; i++) {
+            result = result * i;
         }
-        if (n < 1 ) {
+        if (number < 1) {
             System.out.println("Некорректный ввод числа");
         } else {
-            System.out.println(res);
+            System.out.println(result);
         }
         /*
         Результат:

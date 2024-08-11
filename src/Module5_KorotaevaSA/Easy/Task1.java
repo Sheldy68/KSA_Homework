@@ -10,15 +10,26 @@ public class Task1 {
          */
         System.out.println("Введите число и степень");
         Scanner scanner = new Scanner(System.in);
-        int a = scanner.nextInt();
-        int n = scanner.nextInt();
+        int number = scanner.nextInt();
+        int power = scanner.nextInt();
         System.out.println("Результат: ");
-        int i = 1;
-        int res = 1;
-        do {
-            res = res * a;
+        int i = 1; //счетчик
+        int result = 1;
+//        do {
+//            result = result * number;
+//            i++;
+//        } while (i <= power);
+        //цикл do while наименее предпочтителен
+
+        while (i <= power) {
+            result = result * number;
             i++;
-        } while (i <= n);
-        System.out.println(res);
+        }
+//     или  можно так
+//        for (int i = 1; i <= power; i++) {
+//            result = result * number;
+//        }
+
+        System.out.println(result);
     }
 }
