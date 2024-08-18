@@ -3,19 +3,28 @@ package Module7_KorotaevaSA.Middle.Task1;
 import java.util.Random;
 
 public class Thimble {
-    private int realThimble;
-    private Random random;
+
+    private boolean isThisThimble;
 
     public Thimble() {
-        random = new Random();
+        isThisThimble = false;
     }
 
-    public int showNumberThimble() {
-        return realThimble;
+    public boolean checkThimble(){
+        return isThisThimble;
     }
 
-    public void shuffleThimbles() {
+    public static int shuffleThimbles() {
         // перемешаем напрестки
-        realThimble = random.nextInt(3) + 1;
+        Random random = new Random();
+        return random.nextInt(3);
+    }
+
+    public void setThimbleTrue() {
+        isThisThimble = true;
+    }
+
+    public void setThimbleFalse() {
+        isThisThimble = false;
     }
 }
