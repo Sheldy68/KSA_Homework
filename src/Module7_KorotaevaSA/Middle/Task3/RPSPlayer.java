@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class RPSPlayer {
     private String name;
-    final static int maxNmber = 3;
+    final static int MAX_NUMBER = 3;
     private String answer;
 
     public RPSPlayer(String name) {
@@ -29,6 +29,6 @@ public class RPSPlayer {
 
     public int makeGuessComp() {
         Random random = new Random();
-        return random.nextInt(maxNmber);
+        return random.nextInt(MAX_NUMBER);
     }
 }
