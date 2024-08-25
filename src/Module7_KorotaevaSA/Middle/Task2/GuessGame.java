@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class GuessGame {
     private int computerNumber;
-    final static int maxNmber = 10;
+    final static int MAX_NUMBER = 10;
     public int attemptCounter;
     public int mode = 0;//инициализация режима игры
     Scanner scanner = new Scanner(System.in);
@@ -13,7 +13,7 @@ public class GuessGame {
     //конструктор. Инициализация числа, загаданного компьютером
     public GuessGame() {
         Random random = new Random();
-        computerNumber = random.nextInt(maxNmber) + 1;
+        computerNumber = random.nextInt(MAX_NUMBER) + 1;
     }
     public void setMode() {
         System.out.print("Выберите режим игры: 1 - неограниченное число попыток, 2 - 3 попытки: ");

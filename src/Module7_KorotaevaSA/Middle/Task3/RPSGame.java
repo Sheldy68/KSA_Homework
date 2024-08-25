@@ -3,18 +3,6 @@ package Module7_KorotaevaSA.Middle.Task3;
 import java.util.Scanner;
 
 public class RPSGame {
-    private RPSPlayer user;
-    private RPSPlayer computer;
-
-    //конструктор
-    public RPSGame() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите ваше имя: ");
-        String playerName = scanner.nextLine();
-
-        user = new RPSPlayer(playerName);
-        computer = new RPSPlayer("Компьютер");
-    }
 
     public static boolean isNumber( String string) {
         try {
@@ -28,6 +16,13 @@ public class RPSGame {
     public void play() {
         int guessUser = 0; // инициализация ответа пользователя
         int guessComputer = 0; // инициализация ответа компа
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите ваше имя: ");
+        String playerName = scanner.nextLine();
+
+        RPSPlayer user = new RPSPlayer(playerName);
+        RPSPlayer computer = new RPSPlayer("Компьютер");
 
         while (guessUser == guessComputer) {
             // ход игрока и компа

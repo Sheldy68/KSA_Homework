@@ -4,9 +4,8 @@ import java.time.LocalDateTime;
 
 public class Clock {
 
-    public static void showTime(){
-        LocalDateTime timeNow = LocalDateTime.now();
-        System.out.println("Текущее время: " + timeNow);
+    public void showTime(){
+        System.out.println("Текущее время: " + LocalDateTime.now());
     }
 
 }
