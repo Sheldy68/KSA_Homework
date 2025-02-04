@@ -15,13 +15,18 @@ public class Main {
         BankAccount account2 = new BankAccount("22222", 2000);
 
         // Добавление счетов в банк
-        bank.addAccount(account1, 0);
-        bank.addAccount(account2, 1);
+        bank.addAccount(account1);
+        bank.addAccount(account2);
 
         // Переводы
         bank.transfers("11111", "22222", 500);
         bank.transfers("22222", "11111", 3000); // Ошибка по сумме
         bank.transfers("33333", "11111", 3000); // Ошибка по счету
+
+        //еще один счет с расширением исходного массива
+        BankAccount account4 = new BankAccount("44444", 4000);
+        bank.addAccount(account4);
+        bank.transfers("44444", "11111", 3000); //
     }
     /* Результат
     Перевод 500 с счёта 11111 на счёт 22222 проведен.
@@ -30,5 +35,7 @@ public class Main {
     Сумма на счете 22222: 2500
     Сумма перевода: 3000
     Счет 33333 не найден
+    Перевод 3000 с счёта 44444 на счёт 11111 проведен.
+    Сумма на счете 11111: 3500
      */
 }

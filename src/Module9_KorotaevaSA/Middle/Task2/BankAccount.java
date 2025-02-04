@@ -1,7 +1,7 @@
 package Module9_KorotaevaSA.Middle.Task2;
 
 public class BankAccount {
-    private String accountNumber;
+    private final String accountNumber; //номер счета не должен меняться, поэтому final
     private int balance;
 
     public BankAccount(String accountNumber, int balance) {
