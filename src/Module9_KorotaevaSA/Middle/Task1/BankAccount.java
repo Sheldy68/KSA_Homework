@@ -1,16 +1,16 @@
 package Module9_KorotaevaSA.Middle.Task1;
 
 public class BankAccount {
-    private int balance;
+    private double balance;
 
-    public BankAccount(int balance) {
+    public BankAccount(double balance) {
         this.balance = balance;
     }
 
     /*
 Положить деньги на счет
  */
-    public void pop(int money) {
+    public void pop(double money) {
         balance += money;
         System.out.println("Сумма на счете: " + balance);
     }
@@ -18,7 +18,7 @@ public class BankAccount {
     /*
  Вывести деньги со счета
 */
-    public void push(int money) {
+    public void push(double money) {
         if (money > balance) {
             System.out.println("Недостаточно средств на счете для перевода суммы: " + money);
         } else {
